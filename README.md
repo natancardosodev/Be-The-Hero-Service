@@ -1,4 +1,5 @@
-# Projeto Backend da Semana OmniStack 11
+# Be The Hero - Service
+Projeto Backend da Semana OmniStack 11
 
 ## Environment no Insomnia
 ```json
@@ -12,6 +13,10 @@
 * Request Body: Corpo da requisição, utilizado para criar ou alterar recursos - request.body;
 
 ## Knex - Query Builder
-```
-npx knex init
+```js
+npx knex init // cria arquivo knexfile.js
+// Adicione os diretorios a configuração
+npx knex migrate:make create_ongs 
+// Configure a migration
+npx knex migrate:latest // gera todas as migrations
 ```
