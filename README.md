@@ -10,3 +10,8 @@
 * Query: Parâmetros nomeados enviados na rota após "?" (Filtros, Paginação) - request.query;
 * Route Params: Parâmetros utilizados para identificar recursos (/:id) - request.params;
 * Request Body: Corpo da requisição, utilizado para criar ou alterar recursos - request.body;
+
+## Knex - Query Builder
+```
+npx knex init
+```
