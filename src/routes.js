@@ -1,12 +1,18 @@
 const express = require('express');
 
+const OngController = require('./controllers/OngController');
+const IncidentsController = require('./controllers/IncidentsController');
+
 const routes = express.Router();
 
-routes.get('/users', (request, response) => {
-    return response.json({
-        evento: 'Semana OmniStack 11.0',
-        aluno: 'Natan Cardoso'
-    })
-});
+const endpointOngs = '/ongs';
+const endpointIncidents = '/incidents';
+
+routes.get(endpointOngs, OngController.index);
+routes.post(endpointOngs, OngController.create);
+
+routes.get(endpointIncidents, IncidentsController.index);
+routes.post(endpointIncidents, IncidentsController.create);
+routes.delete(endpointIncidents + '/:id', IncidentsController.delete);
 
 module.exports = routes;
