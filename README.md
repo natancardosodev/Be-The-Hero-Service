@@ -18,5 +18,6 @@ npx knex init // cria arquivo knexfile.js
 // Adicione os diretorios a configuração
 npx knex migrate:make create_ongs 
 // Configure a migration
-npx knex migrate:latest // gera todas as migrations
+npx knex migrate:latest // gera todas as migrations - npm run update-db
+// apagar sqlite - npm run rm-db
 ```
