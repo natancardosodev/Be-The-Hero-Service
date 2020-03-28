@@ -1,11 +1,12 @@
 # Be The Hero - Service
-Projeto Backend da Semana OmniStack 11
-
-![BeTheHero](src/img/logo.png)
+<img style="float: left; position: relative; top: 0; margin-right: 15px" src="src/img/logo.png">
+O Be The Hero, do inglês, 'Seja o Herói, foi a aplicação desenvolvida na Semana OmniStack 11 da Rocktseat. Essa aplicação tem como objetivo conectar pessoas que querem ajudar uma organização não governavental (ONG). Através da aplicação serão listados casos que precisam de ajuda. Esse é o projeto back-end feito com Node.JS.
 
 ## Instalação
 ```cmd
+-- Instalar pacotes npm
 npm install
+-- gerar todas as migrations
 npm run update-db
 ```
 
@@ -13,6 +14,8 @@ npm run update-db
 ```cmd
 npm run start
 ```
+> Caso seja necessário excluir a base de dados, execute: `npm run rm-db`. Depois gere novamente as migrations.
+
 ## Ferramentas utilizadas
 * **Node.JS** - Uma plataforma escrita em cima do motor V8 do Google Chrome. Sendo assim, é possível criar aplicações Javascript para rodar como uma aplicação standalone em uma máquina, não dependendo de um browser para a execução.
 * **Express** - É um framework para Node.js que contém um conjunto de recursos para desenvolver aplicações web, como um sistema de Views intuitivo (MVC) e um robusto sistema de roteamento.
@@ -25,14 +28,13 @@ npx knex init // cria arquivo knexfile.js
 // Adicione os diretorios a configuração
 npx knex migrate:make create_ongs 
 // Configure a migration
-npx knex migrate:latest // gera todas as migrations - npm run update-db
-// apagar sqlite - npm run rm-db
+npx knex migrate:latest // gera todas as migrations
 ```
 
 ## Tipos de Parâmetros
-* Query: Parâmetros nomeados enviados na rota após "?" (Filtros, Paginação) - request.query;
-* Route Params: Parâmetros utilizados para identificar recursos (/:id) - request.params;
-* Request Body: Corpo da requisição, utilizado para criar ou alterar recursos - request.body;
+* **Query:** Parâmetros nomeados enviados na rota após "?" (Filtros, Paginação) - request.query;
+* **Route Params:** Parâmetros utilizados para identificar recursos (/:id) - request.params;
+* **Request Body:** Corpo da requisição, utilizado para criar ou alterar recursos - request.body;
 
 ## Environment no Insomnia
 Endpoint: `{{ base_url  }}{{ endpoint  }}`
@@ -45,8 +47,8 @@ Endpoint: `{{ base_url  }}{{ endpoint  }}`
 
 ## Endpoints
 ### ONGS
-* GET: http://localhost:3333/ongs
-* POST: http://localhost:3333/ongs
+* **GET:** http://localhost:3333/ongs
+* **POST:** http://localhost:3333/ongs
 ```json
 {
 	"name": "APESOC",
@@ -58,11 +60,11 @@ Endpoint: `{{ base_url  }}{{ endpoint  }}`
 ```
 
 ### INCIDENTS (Casos)
-* GET: http://localhost:3333/incidents?page=2
+* **GET:** http://localhost:3333/incidents?page=2
 
 Header Response: 'X-Total-Count': Total de incidents
 
-* POST: http://localhost:3333/incidents
+* **POST:** http://localhost:3333/incidents
 
 Header Request: 'Authorization': '410ace8b' (ong_id)
 ```json
@@ -72,17 +74,17 @@ Header Request: 'Authorization': '410ace8b' (ong_id)
 	"value": 80
 }
 ```
-* DELETE: http://localhost:3333/incidents/2
+* **DELETE:** http://localhost:3333/incidents/2
 
 Header Request: 'Authorization': '410ace8b' (ong_id)
 
-### Profile (Get Ong Incidents)
-* GET: http://localhost:3333/profile
+### PROFILE (Get Ong Incidents)
+* **GET:** http://localhost:3333/profile
 
 Header Request: 'Authorization': '410ace8b' (ong_id)
 
 ### SESSION
-* POST: http://localhost:3333/session
+* **POST:** http://localhost:3333/session
 ```json
 {
 	"id": "410ace8b"
