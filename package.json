@@ -6,7 +6,8 @@
   "scripts": {
     "start": "nodemon src/index.js",
     "update-db": "npx knex migrate:latest",
-    "rm-db": "rm src/database/db.sqlite"
+    "rm-db": "rm src/database/db.sqlite",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +16,7 @@
     "celebrate": "^12.0.1",
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "jest": "^25.2.7",
     "knex": "^0.20.13",
     "sqlite3": "^4.1.1"
   },
