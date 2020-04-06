@@ -16,6 +16,11 @@ npm run start
 ```
 > Caso seja necessário excluir a base de dados, execute: `npm run rm-db`. Depois gere novamente as migrations.
 
+## Testes unitários e de integração com Jest
+```cmd
+npm run test
+```
+
 ## Ferramentas utilizadas
 * **Node.JS** - Uma plataforma escrita em cima do motor V8 do Google Chrome. Sendo assim, é possível criar aplicações Javascript para rodar como uma aplicação standalone em uma máquina, não dependendo de um browser para a execução.
 * **Express** - É um framework para Node.js que contém um conjunto de recursos para desenvolver aplicações web, como um sistema de Views intuitivo (MVC) e um robusto sistema de roteamento.
