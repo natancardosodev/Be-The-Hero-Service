@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon src/server.js",
+    "create-tb": "npx knex migrate:make ",
     "update-db": "npx knex migrate:latest",
     "rm-db": "rm src/database/db.sqlite",
     "test": "cross-env NODE_ENV=test jest"
